@@ -4,7 +4,7 @@
     using Contracts;
     using Models;
 
-    public class OperationFactory
+    public abstract class OperationFactory
     {
         private static Dictionary<string, ICalculatable> operations = new Dictionary<string, ICalculatable>
         {
