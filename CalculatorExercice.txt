@@ -1,0 +1,11 @@
+Calculator:
+- Create a calculator application with Windows forms
+- The calculator should have the following operators: +,-,*,/,= -> the result is recalculated after each operator is chosen.
+	Example: - 1 + 2 => (3)
+		 - (3) + 2 => 5
+- Floating point numbers should be supported
+- Memory operations - be able to save calculated value from last operation in memory with a button (Mem) and recall the result (RMem), be able to clear the memory (CMem)
+- Be able to undo the last operations
+- Be able to clear the entered values
+- Be able to copy the result to the clipboard
+- Be able to paste a value from the clipboard

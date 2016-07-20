@@ -1,0 +1,36 @@
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Education\CS\Projects\C# Projects\Introduction to Windows Forms\Ex02\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Education\CS\Projects\C# Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Projects\CalculatorStrategy\Calculator\bin\Debug\Calculator.exe.config
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.exe
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.pdb
+D:\Projects\CalculatorStrategy\Calculator\bin\Debug\Calculator.exe
+D:\Projects\CalculatorStrategy\Calculator\bin\Debug\Calculator.pdb
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
