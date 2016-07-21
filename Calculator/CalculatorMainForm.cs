@@ -36,7 +36,7 @@ namespace Calculator
 
         private Font bigFont = new Font("Microsoft Sans Serif", 32F, FontStyle.Bold, GraphicsUnit.Point, 204);
         private Font midFont = new Font("Microsoft Sans Serif", 28F, FontStyle.Bold, GraphicsUnit.Point, 204);
-        private Font smallFont = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 204);
+        private Font smallFont = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 204);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CalculatorMainForm" /> class
@@ -60,7 +60,7 @@ namespace Calculator
             Button currentButton = sender as Button;
 
             // Append the button value if the value entered does not exceed the max allowed
-            if (resultBox.Text.Length < resultBox.MaxLength)
+            if (resultBox.Text.Length < resultBox.MaxLength - 1)
             {
                 resultBox.Text += currentButton.Text;
             }
@@ -241,11 +241,11 @@ namespace Calculator
         // Update the fint size
         private void UpdateFontSize()
         {
-            if (resultBox.Text.Length <= 12)
+            if (resultBox.Text.Length <= 16)
             {
                 resultBox.Font = bigFont;
             }
-            else if (resultBox.Text.Length <= 16)
+            else if (resultBox.Text.Length <= 18)
             {
                 resultBox.Font = midFont;
             }
