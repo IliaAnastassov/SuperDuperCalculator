@@ -15,7 +15,6 @@ namespace Calculator
     using Factories;
 
     // TODO: Handle -/+ case for large numbers
-    // TODO: Handle .0 case
     // TODO: Handle del on negative single digit numbers
 
     /// <summary>
@@ -24,7 +23,7 @@ namespace Calculator
     public partial class CalculatorMainForm : Form
     {
         private const int MaxInputLenth = 18;
-        private const int MaxResutLenth = 14;
+        private const int MaxResultLenth = 14;
         private Font bigFont = new Font("Microsoft Sans Serif", 32F, FontStyle.Bold, GraphicsUnit.Point, 204);
         private Font midFont = new Font("Microsoft Sans Serif", 28F, FontStyle.Bold, GraphicsUnit.Point, 204);
         private Font smallFont = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -67,8 +66,6 @@ namespace Calculator
                 resultBox.Text += currentButton.Text;
             }
 
-            // Show the result on the screen in the right format
-            resultBox.Text = FormatOutput(double.Parse(resultBox.Text));
             UpdateFontSize();
         }
 
@@ -148,7 +145,7 @@ namespace Calculator
 
         private void ButtonPoint_Click(object sender, EventArgs e)
         {
-            if (!resultBox.Text.Contains(buttonPoint.Text))
+            if (!resultBox.Text.Contains(".") && !invalidOperation && resultBox.Text.Length < MaxResultLenth)
             {
                 resultBox.Text += ".";
             }
@@ -168,7 +165,7 @@ namespace Calculator
         private void ButtonDel_Click(object sender, EventArgs e)
         {
             // Only if the operation before is valid
-            if (!invalidOperation)
+            if (!invalidOperation && !equalsPressed)
             {
                 if (resultBox.Text.Length > 1)
                 {
@@ -217,24 +214,16 @@ namespace Calculator
         // Formats the output
         private string FormatOutput(double result)
         {
-            if (result.ToString().Length > MaxResutLenth)
+            if (result.ToString().Length > MaxResultLenth)
             {
-                return string.Format($"{result:e7}");
+                return result.ToString("e7");
             }
             else
             {
+                // In case of a decimal number
                 if (result.ToString().Contains("."))
                 {
-                    var decimalPart = result.ToString().Split('.')[1];
-
-                    if (decimalPart[decimalPart.Length - 1] == '0')
-                    {
-                        return string.Format($"{result,16:N10}");
-                    }
-                    else
-                    {
-                        return string.Format($"{result,16:N10}").TrimEnd('0');
-                    }
+                    return string.Format($"{result:N10}").TrimEnd('0');
                 }
                 else
                 {
@@ -253,6 +242,8 @@ namespace Calculator
             tempResult = 0;
             currentOperator = string.Empty;
             operatorPressed = false;
+            equalsPressed = false;
+            invalidOperation = false;
             equation.Clear();
             equationTextBox.Clear();
             UpdateFontSize();
@@ -261,11 +252,11 @@ namespace Calculator
         // Update the fint size
         private void UpdateFontSize()
         {
-            if (resultBox.Text.Length <= 16)
+            if (resultBox.Text.Length <= 14)
             {
                 resultBox.Font = bigFont;
             }
-            else if (resultBox.Text.Length <= 18)
+            else if (resultBox.Text.Length > 14 && resultBox.Text.Length <= 16)
             {
                 resultBox.Font = midFont;
             }
