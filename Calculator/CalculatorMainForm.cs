@@ -14,7 +14,7 @@ namespace Calculator
     using Contracts;
     using Factories;
 
-    // TODO: Handle 1,163,743,373. case
+    // TODO: Handle -/+ case for large numbers
     // TODO: Handle .0 case
     // TODO: Handle del on negative single digit numbers
 
@@ -23,6 +23,12 @@ namespace Calculator
     /// </summary>
     public partial class CalculatorMainForm : Form
     {
+        private const int MaxInputLenth = 18;
+        private const int MaxResutLenth = 14;
+        private Font bigFont = new Font("Microsoft Sans Serif", 32F, FontStyle.Bold, GraphicsUnit.Point, 204);
+        private Font midFont = new Font("Microsoft Sans Serif", 28F, FontStyle.Bold, GraphicsUnit.Point, 204);
+        private Font smallFont = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 204);
+
         private List<double> valueList = new List<double>(8); // Estimation: average use of less than 8 values per application run
         private List<string> operatorList = new List<string>(7); // Estimation: average operators = average values - 1
         private double valueOne = 0;
@@ -33,10 +39,6 @@ namespace Calculator
         private bool equalsPressed = false;
         private bool invalidOperation = false;
         private StringBuilder equation = new StringBuilder();
-
-        private Font bigFont = new Font("Microsoft Sans Serif", 32F, FontStyle.Bold, GraphicsUnit.Point, 204);
-        private Font midFont = new Font("Microsoft Sans Serif", 28F, FontStyle.Bold, GraphicsUnit.Point, 204);
-        private Font smallFont = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 204);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CalculatorMainForm" /> class
@@ -60,7 +62,7 @@ namespace Calculator
             Button currentButton = sender as Button;
 
             // Append the button value if the value entered does not exceed the max allowed
-            if (resultBox.Text.Length < resultBox.MaxLength - 1)
+            if (resultBox.Text.Length < MaxInputLenth)
             {
                 resultBox.Text += currentButton.Text;
             }
@@ -215,7 +217,7 @@ namespace Calculator
         // Formats the output
         private string FormatOutput(double result)
         {
-            if (result.ToString().Length > 14)
+            if (result.ToString().Length > MaxResutLenth)
             {
                 return string.Format($"{result:e7}");
             }
