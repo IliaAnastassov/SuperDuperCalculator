@@ -201,8 +201,9 @@ namespace Calculator
                     var operation = OperationFactory.GetOperation(currentOperator);
                     tempResult = operation.Calculate(valueOne, valueTwo);
 
-                    // Show the result on the screen in the right format
+                    // Show the result on the screen in the right format and update font size
                     resultBox.Text = FormatOutput(tempResult);
+                    UpdateFontSize();
 
                     // Set the last value to the result of the last operation
                     // On the next iteration valueOne will be set to this value, and valueTwo - to the new last value
@@ -215,7 +216,7 @@ namespace Calculator
         {
             if (result.ToString().Contains("."))
             {
-                return string.Format($"{result:N10}").TrimEnd('0');
+                return string.Format("{0,16:N10}", result);
             }
             else
             {
