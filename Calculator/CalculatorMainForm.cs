@@ -14,7 +14,6 @@ namespace Calculator
     using Contracts;
     using Factories;
 
-    // TODO: Handle -/+ case for large numbers
     // TODO: Handle del on negative single digit numbers
 
     /// <summary>
@@ -154,11 +153,17 @@ namespace Calculator
         private void ButtonPlusMinus_Click(object sender, EventArgs e)
         {
             // Only if the operation before is valid
-            if (!invalidOperation)
+            if (!invalidOperation && resultBox.Text != "0")
             {
                 // Inverts the sign of the current value
-                var currentValue = double.Parse(resultBox.Text);
-                resultBox.Text = FormatOutput(currentValue * -1);
+                if (resultBox.Text[0] == '-')
+                {
+                    resultBox.Text = resultBox.Text.Remove(0, 1);
+                }
+                else
+                {
+                    resultBox.Text = "-" + resultBox.Text;
+                }
             }
         }
 
@@ -167,14 +172,30 @@ namespace Calculator
             // Only if the operation before is valid
             if (!invalidOperation && !equalsPressed)
             {
-                if (resultBox.Text.Length > 1)
+                if (resultBox.Text.Length > 2)
                 {
-                    resultBox.Text = FormatOutput(double.Parse(resultBox.Text.Remove(resultBox.Text.Length - 1, 1)));
+                    resultBox.Text = resultBox.Text.Remove(resultBox.Text.Length - 1, 1);
                 }
                 else
                 {
-                    resultBox.Text = "0";
+                    if (resultBox.Text.Contains("-"))
+                    {
+                        resultBox.Text = "0";
+                    }
+                    else
+                    {
+                        if (resultBox.Text.Length > 1)
+                        {
+                            resultBox.Text = resultBox.Text.Remove(resultBox.Text.Length - 1, 1);
+                        }
+                        else
+                        {
+                            resultBox.Text = "0";
+                        }
+                    }
                 }
+
+                UpdateFontSize();
             }
         }
 
