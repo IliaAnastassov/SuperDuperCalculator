@@ -78,8 +78,6 @@ namespace Calculator
             // Only if the operation before is valid
             if (!invalidOperation)
             {
-                invalidOperation = false;
-
                 // Do when operator button is pressed for the first time
                 if (!operatorPressed)
                 {
