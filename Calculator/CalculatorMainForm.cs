@@ -14,7 +14,7 @@ namespace Calculator
     using Contracts;
     using Factories;
 
-    // TODO: Handle del on negative single digit numbers
+    // TODO: 
 
     /// <summary>
     /// Main form for the calculator
@@ -54,6 +54,7 @@ namespace Calculator
                 resultBox.Clear();
                 operatorPressed = false;
                 equalsPressed = false;
+                invalidOperation = false;
             }
 
             // Cast the object sender as Button in order to get the value of the current button
@@ -73,11 +74,12 @@ namespace Calculator
         {
             Button currentOperatorBtn = sender as Button;
             currentOperator = currentOperatorBtn.Text;
-            invalidOperation = false;
 
             // Only if the operation before is valid
             if (!invalidOperation)
             {
+                invalidOperation = false;
+
                 // Do when operator button is pressed for the first time
                 if (!operatorPressed)
                 {
@@ -104,7 +106,7 @@ namespace Calculator
                             .Append(" ");
                 }
 
-                // Mark that an operator is pressed
+                // Mark that an operator is pressed and operation as valid
                 operatorPressed = true;
 
                 // Show the current equation on the screen
@@ -135,11 +137,13 @@ namespace Calculator
         {
             resultBox.Text = "0";
             ResetCalculator();
+            invalidOperation = false;
         }
 
         private void ButtonClearEntry_Click(object sender, EventArgs e)
         {
             resultBox.Text = "0";
+            invalidOperation = false;
         }
 
         private void ButtonPoint_Click(object sender, EventArgs e)
@@ -263,8 +267,6 @@ namespace Calculator
             tempResult = 0;
             currentOperator = string.Empty;
             operatorPressed = false;
-            equalsPressed = false;
-            invalidOperation = false;
             equation.Clear();
             equationTextBox.Clear();
             UpdateFontSize();

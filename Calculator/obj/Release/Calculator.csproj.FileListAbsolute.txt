@@ -7,3 +7,12 @@ D:\Projects\Calculator\Calculator\obj\Release\Calculator.csproj.GenerateResource
 D:\Projects\Calculator\Calculator\obj\Release\Calculator.exe
 D:\Projects\Calculator\Calculator\obj\Release\Calculator.pdb
 D:\Projects\Calculator\Calculator\obj\Release\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\CalculatorStrategy\Calculator\bin\Release\Calculator.exe.config
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.exe
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.pdb
+D:\Projects\CalculatorStrategy\Calculator\bin\Release\Calculator.exe
+D:\Projects\CalculatorStrategy\Calculator\bin\Release\Calculator.pdb
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.CalculatorMainForm.resources
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.Properties.Resources.resources
+D:\Projects\CalculatorStrategy\Calculator\obj\Release\Calculator.csproj.GenerateResource.Cache
