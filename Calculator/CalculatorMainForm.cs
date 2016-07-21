@@ -14,7 +14,7 @@ namespace Calculator
     using Contracts;
     using Factories;
 
-    // TODO: Handle length input (1,566,354,235.)
+    // TODO: Handle 1,163,743,373. case
     // TODO: Handle .0 case
     // TODO: Handle del on negative single digit numbers
 
@@ -212,15 +212,32 @@ namespace Calculator
             }
         }
 
+        // Formats the output
         private string FormatOutput(double result)
         {
-            if (result.ToString().Contains("."))
+            if (result.ToString().Length > 14)
             {
-                return string.Format("{0,16:N10}", result);
+                return string.Format($"{result:e7}");
             }
             else
             {
-                return string.Format($"{result:N0}");
+                if (result.ToString().Contains("."))
+                {
+                    var decimalPart = result.ToString().Split('.')[1];
+
+                    if (decimalPart[decimalPart.Length - 1] == '0')
+                    {
+                        return string.Format($"{result,16:N10}");
+                    }
+                    else
+                    {
+                        return string.Format($"{result,16:N10}").TrimEnd('0');
+                    }
+                }
+                else
+                {
+                    return string.Format($"{result:N0}");
+                }
             }
         }
 
