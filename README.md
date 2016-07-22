@@ -1,6 +1,6 @@
 # SuperDuperCalculator - make maths easy and fun!
 
-The calculator also provides a nice, simple and user-friendly GUI. You can do various calculations 
+The calculator provides a nice, simple and user-friendly GUI. You can do various calculations 
 fast and easy, harnessing the full computational power of your system!
 
 - you can add
