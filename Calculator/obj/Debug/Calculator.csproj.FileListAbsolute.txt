@@ -35,3 +35,11 @@ D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.CalculatorMainFor
 D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
 D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\bin\Debug\Calculator.exe
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\bin\Debug\Calculator.pdb
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.exe
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\obj\Debug\Calculator.pdb
