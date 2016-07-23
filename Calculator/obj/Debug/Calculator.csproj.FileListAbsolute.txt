@@ -34,3 +34,4 @@ D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.csprojResolveAsse
 D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.CalculatorMainForm.resources
 D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 D:\Projects\CalculatorStrategy\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Work\IT\Proxiad\Projects\SuperDuperCalculator\Calculator\bin\Debug\Calculator.exe.config

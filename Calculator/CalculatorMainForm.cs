@@ -46,7 +46,6 @@ namespace Calculator
             InitializeComponent();
         }
 
-        // Event handler of a number button
         private void ButtonNum_Click(object sender, EventArgs e)
         {
             if (resultBox.Text == "0" || operatorPressed || equalsPressed)
@@ -69,7 +68,6 @@ namespace Calculator
             UpdateFontSize();
         }
 
-        // Event handler of a operator button
         private void ButtonOperator_Click(object sender, EventArgs e)
         {
             Button currentOperatorBtn = sender as Button;
@@ -112,7 +110,6 @@ namespace Calculator
             }
         }
 
-        // Event handler of the equals button
         private void ButtonEquals_Click(object sender, EventArgs e)
         {
             // Only if the operation before is valid
@@ -234,7 +231,6 @@ namespace Calculator
             }
         }
 
-        // Formats the output
         private string FormatOutput(double result)
         {
             if (result.ToString().Length > MaxResultLenth)
@@ -255,7 +251,6 @@ namespace Calculator
             }
         }
 
-        // Reset the calculator to initial state
         private void ResetCalculator()
         {
             valueList.Clear();
@@ -270,7 +265,6 @@ namespace Calculator
             UpdateFontSize();
         }
 
-        // Update the fint size
         private void UpdateFontSize()
         {
             if (resultBox.Text.Length <= 14)
