@@ -11,7 +11,6 @@ namespace Calculator
     using System.Drawing;
     using System.Text;
     using System.Windows.Forms;
-    using Contracts;
     using Factories;
 
     // TODO: 
@@ -21,8 +20,10 @@ namespace Calculator
     /// </summary>
     public partial class CalculatorMainForm : Form
     {
-        private const int MaxInputLenth = 18;
-        private const int MaxResultLenth = 14;
+        private const int MaxInputLength = 18;
+        private const int MaxResultLength = 14;
+        private const int BigFontMaxLength = 14;
+        private const int MidFontMaxLenght = 16;
         private Font bigFont = new Font("Microsoft Sans Serif", 32F, FontStyle.Bold, GraphicsUnit.Point, 204);
         private Font midFont = new Font("Microsoft Sans Serif", 28F, FontStyle.Bold, GraphicsUnit.Point, 204);
         private Font smallFont = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -60,7 +61,7 @@ namespace Calculator
             Button currentButton = sender as Button;
 
             // Append the button value if the value entered does not exceed the max allowed
-            if (resultBox.Text.Length < MaxInputLenth)
+            if (resultBox.Text.Length < MaxInputLength)
             {
                 resultBox.Text += currentButton.Text;
             }
@@ -143,7 +144,7 @@ namespace Calculator
 
         private void ButtonPoint_Click(object sender, EventArgs e)
         {
-            if (!resultBox.Text.Contains(".") && !invalidOperation && resultBox.Text.Length < MaxResultLenth)
+            if (!resultBox.Text.Contains(".") && !invalidOperation && resultBox.Text.Length < MaxResultLength)
             {
                 resultBox.Text += ".";
             }
@@ -233,7 +234,7 @@ namespace Calculator
 
         private string FormatOutput(double result)
         {
-            if (result.ToString().Length > MaxResultLenth)
+            if (result.ToString().Length > MaxResultLength)
             {
                 return result.ToString("e7");
             }
@@ -267,11 +268,11 @@ namespace Calculator
 
         private void UpdateFontSize()
         {
-            if (resultBox.Text.Length <= 14)
+            if (resultBox.Text.Length <= BigFontMaxLength)
             {
                 resultBox.Font = bigFont;
             }
-            else if (resultBox.Text.Length > 14 && resultBox.Text.Length <= 16)
+            else if (resultBox.Text.Length > BigFontMaxLength && resultBox.Text.Length <= MidFontMaxLenght)
             {
                 resultBox.Font = midFont;
             }
