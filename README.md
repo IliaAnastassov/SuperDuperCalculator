@@ -1,12 +1,8 @@
 # SuperDuperCalculator - make maths easy and fun!
 
-The calculator provides a nice, simple and user-friendly GUI. You can do various calculations 
-fast and easy, harnessing the full computational power of your system!
+The calculator provides a nice, simple and user-friendly GUI. It allows you to do all the basic
+arithmetic operations - adition, subtraction, multiplication and division. 
 
-- you can add
-- you can subtract
-- you can multiply
-- you can divide
-- you can also **get the result** of the above operations!!!
+This simple project applies factory and strategy design patterns.
 
-### Don't waste your time anymore, join this great project!
+All forks are welcome.
